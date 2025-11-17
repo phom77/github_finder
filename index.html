@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GitHub Profile Explorer</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <main class="main-container">
+      <div class="search-wrapper">
+        <i class="fa-brands fa-github logo-icon"></i>
+        <div class="input-group">
+          <input
+            type="text"
+            id="user-input"
+            placeholder="Enter a GitHub username..."
+            autocomplete="off"
+          />
+          <button id="submit-btn">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="alert-message" class="alert-message is-hidden">
+        User not found. Please check the username and try again.
+      </div>
+
+      <div id="profile-display" class="profile-display is-hidden">
+        <aside class="profile-sidebar">
+          <img src="" alt="User Avatar" id="user-avatar" />
+          <h2 id="user-fullname"></h2>
+          <h3 id="user-login"></h3>
+          <p id="user-bio"></p>
+          <a id="view-profile-btn" class="profile-button" target="_blank">
+            View on GitHub
+          </a>
+          <div class="contact-links">
+            <div class="contact-item" id="location-info">
+              <i class="fas fa-map-marker-alt"></i>
+              <span id="user-location"></span>
+            </div>
+            <div class="contact-item" id="website-info">
+              <i class="fas fa-link"></i>
+              <a id="user-website" target="_blank"></a>
+            </div>
+            <div class="contact-item" id="twitter-info">
+              <i class="fab fa-twitter"></i>
+              <a id="user-twitter" target="_blank"></a>
+            </div>
+            <div class="contact-item" id="company-info">
+                <i class="fas fa-building"></i>
+                <span id="user-company"></span>
+            </div>
+          </div>
+        </aside>
+
+        <section class="profile-content">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <h4>Followers</h4>
+              <span id="user-followers"></span>
+            </div>
+            <div class="stat-item">
+              <h4>Following</h4>
+              <span id="user-following"></span>
+            </div>
+            <div class="stat-item">
+              <h4>Repositories</h4>
+              <span id="user-repos"></span>
+            </div>
+          </div>
+
+          <div class="repos-wrapper">
+            <h3>Latest Repositories</h3>
+            <div id="repos-list"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
